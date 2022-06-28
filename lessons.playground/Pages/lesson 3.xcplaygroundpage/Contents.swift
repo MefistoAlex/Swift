@@ -34,7 +34,7 @@ print (price)
 
 
 //task 2
-let userInputAge = "34"
+let userInputAge = "34e"
 let userAge = Int(userInputAge)
 switch userAge{
 case .none:
@@ -44,10 +44,8 @@ case .some(let value):
 }
 if userAge == nil{
     print("no value from if")
-}else{
-    print(userAge!)
 }
-
+print (userAge!)
 
 
 
