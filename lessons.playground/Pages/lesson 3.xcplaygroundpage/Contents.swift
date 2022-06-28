@@ -27,7 +27,7 @@ if count <= 10 {
     price = 1000
 } else if (11...20) ~= count{
     price = 800
-} else if count >= 20{
+} else {
     price = 600
 }
 print (price)
@@ -90,6 +90,7 @@ default:
 let phoneNumber = "+3806324149"
 
 let phoneLendth = phoneNumber.count
+let phonePref = "+380"
 
 
 switch phoneLendth{
@@ -105,7 +106,7 @@ default:
 
 
 if phoneLendth == 13{
-    if phoneNumber.starts(with: "+380"){
+    if phoneNumber.starts(with: phonePref){
         print("Ukranian number")
     } else{
         print("Not ukranian number")
