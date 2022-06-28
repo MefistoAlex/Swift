@@ -65,7 +65,7 @@ let deposit = 5000.00
 let yeasrs = 25
 let interestRate = 0.12
 
-let depositInterest = deposit * 0.12 * Double(yeasrs)
+let depositInterest = deposit * interestRate * Double(yeasrs)
 
 print("Deposit interests from \(deposit)$ (rate: \(interestRate)) after \(yeasrs) years will be \(depositInterest)$")
 /*:
