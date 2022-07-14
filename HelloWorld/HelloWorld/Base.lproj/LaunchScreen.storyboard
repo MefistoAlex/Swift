@@ -23,26 +23,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHe-hL-1c9">
-                                <rect key="frame" x="112" y="595" width="190" height="57"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="y46-Uc-4bp"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Show text">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oHe-hL-1c9" secondAttribute="bottom" constant="210" id="JQV-hE-MYJ"/>
                             <constraint firstItem="KY0-BL-zKd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="KBt-jM-ipc"/>
-                            <constraint firstItem="oHe-hL-1c9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cCf-AU-U6P"/>
                             <constraint firstItem="KY0-BL-zKd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cHr-94-GrD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oHe-hL-1c9" secondAttribute="trailing" constant="112" id="ctd-Kd-KR0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oHe-hL-1c9" secondAttribute="bottom" constant="210" id="xUG-aX-jFv"/>
                         </constraints>
                     </view>
                 </viewController>
