@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='Lesson1 '/>
+        <page name='Lesson2'/>
+        <page name='Lesson3'/>
+        <page name='Lesson4'/>
+        <page name='Lesson5'/>
+        <page name='Lesson6'/>
+        <page name='Lesson7'/>
+        <page name='Lesson8'/>
+        <page name='Lesson9'/>
+        <page name='Lesson10'/>
+        <page name='Lesson11'/>
+        <page name='Lesson12'/>
+        <page name='Lesso13ClassesAndStructs'/>
+    </pages>
+</playground>
