@@ -12,21 +12,36 @@ class ViewController: UIViewController {
         case green
         case yellow
         case red
+        
+        var colorOn: UIColor {
+            switch self {
+            case .green:
+                return UIColor.green
+            case .yellow:
+                return UIColor.yellow
+            case.red:
+                return UIColor.red
+            }
+        }
+        
+        var colorOff: UIColor {
+            switch self {
+            case .green:
+                return UIColor.green.withAlphaComponent(CGFloat(0.3))
+            case .yellow:
+                return UIColor.yellow.withAlphaComponent(CGFloat(0.3))
+            case.red:
+                return UIColor.red.withAlphaComponent(CGFloat(0.3))
+            }
+        }
+       
     }
 
-    @IBOutlet var redLigth: UIView!
-    @IBOutlet var yellowLigth: UIView!
-    @IBOutlet var greenLight: UIView!
-    @IBOutlet var startButton: UIButton!
-    var currentColor: Color?
-    // creating On colors
-    let greenColorOn = UIColor.green.withAlphaComponent(CGFloat(1.0)).cgColor
-    let redColorOn = UIColor.red.withAlphaComponent(CGFloat(1.0)).cgColor
-    let yellowColorOn = UIColor.yellow.withAlphaComponent(CGFloat(1.0)).cgColor
-    // creating Off collors
-    let greenColorOff = UIColor.green.withAlphaComponent(CGFloat(0.3)).cgColor
-    let redColorOff = UIColor.red.withAlphaComponent(CGFloat(0.3)).cgColor
-    let yellowColorOff = UIColor.yellow.withAlphaComponent(CGFloat(0.3)).cgColor
+    @IBOutlet private var redLigth: UIView!
+    @IBOutlet private var yellowLigth: UIView!
+    @IBOutlet private var greenLight: UIView!
+    @IBOutlet private var startButton: UIButton!
+    private var currentColor: Color?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +49,10 @@ class ViewController: UIViewController {
         yellowLigth.layer.cornerRadius = 100
         redLigth.layer.cornerRadius = 100
 
-        greenLight.layer.backgroundColor = greenColorOff
-        yellowLigth.layer.backgroundColor = yellowColorOff
-        redLigth.layer.backgroundColor = redColorOff
+        greenLight.backgroundColor = Color.green.colorOff
+        yellowLigth.backgroundColor = Color.yellow.colorOff
+        redLigth.backgroundColor = Color.red.colorOff
 
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func buttonStartAction() {
@@ -49,20 +63,21 @@ class ViewController: UIViewController {
         if let color = currentColor {
             switch color {
             case .green:
-                greenLight.layer.backgroundColor = greenColorOn
-                yellowLigth.layer.backgroundColor = yellowColorOff
-                redLigth.layer.backgroundColor = redColorOff
+                greenLight.backgroundColor = Color.green.colorOn
+                yellowLigth.backgroundColor = Color.yellow.colorOff
+                redLigth.backgroundColor = Color.red.colorOff
                 currentColor = .yellow
             case .yellow:
-                greenLight.layer.backgroundColor = greenColorOff
-                yellowLigth.layer.backgroundColor = yellowColorOn
-                redLigth.layer.backgroundColor = redColorOff
+                greenLight.backgroundColor = Color.green.colorOff
+                yellowLigth.backgroundColor = Color.yellow.colorOn
+                redLigth.backgroundColor = Color.red.colorOff
                 currentColor = .red
             case .red:
-                greenLight.layer.backgroundColor = greenColorOff
-                yellowLigth.layer.backgroundColor = yellowColorOff
-                redLigth.layer.backgroundColor = redColorOn
+                greenLight.backgroundColor = Color.green.colorOff
+                yellowLigth.backgroundColor = Color.yellow.colorOff
+                redLigth.backgroundColor = Color.red.colorOn
                 currentColor = .green
+            
             }
         }
     }
