@@ -67,9 +67,9 @@ class ViewController: UIViewController {
     //MARK: Private
     private func updateUI() {
         let color = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
+            red: CGFloat(redSlider.value / 255),
+            green: CGFloat(greenSlider.value / 255),
+            blue: CGFloat(blueSlider.value / 255),
             alpha: 1)
         view.layer.backgroundColor = color.cgColor
     }
