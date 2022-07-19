@@ -15,5 +15,7 @@
         <page name='Lesson12'/>
         <page name='Lesson13ClassesAndStructs'/>
         <page name='Lesson14Properties'/>
+        <page name='Lesson15PropertiesOfTypes'/>
+        <page name='Lesson16Methods'/>
     </pages>
 </playground>
