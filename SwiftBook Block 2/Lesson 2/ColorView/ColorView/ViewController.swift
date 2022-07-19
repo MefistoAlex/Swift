@@ -24,22 +24,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // MARK: init
-
-        redSlider.value = 0
-        redSlider.minimumValue = 0
-        redSlider.maximumValue = 255
+        [redSlider, greenSlider, blueSlider].forEach {
+            $0?.value = 0
+            $0?.minimumValue = 0
+            $0?.maximumValue = 255
+        }
+            
         redSlider.minimumTrackTintColor = .red
         redSlider.thumbTintColor = .red
 
-        greenSlider.value = 0
-        greenSlider.minimumValue = 0
-        greenSlider.maximumValue = 255
         greenSlider.minimumTrackTintColor = .green
         greenSlider.thumbTintColor = .green
 
-        blueSlider.value = 0
-        blueSlider.minimumValue = 0
-        blueSlider.maximumValue = 255
         blueSlider.minimumTrackTintColor = .blue
         blueSlider.thumbTintColor = .blue
 
@@ -47,7 +43,7 @@ class ViewController: UIViewController {
         greenLabel.text = "Green (\(Int(greenSlider.value)))"
         blueLabel.text = "Blue (\(Int(blueSlider.value)))"
 
-        // Do any additional setup after loading the view.
+       
     }
     @IBAction func redSliderChange(_ sender: Any) {
         redLabel.text = "Red (\(Int(redSlider.value)))"
