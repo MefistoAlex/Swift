@@ -24,10 +24,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ews-No-lUG">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ews-No-lUG">
                                         <rect key="frame" x="0.0" y="42" width="354" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cre-mS-4HM">
                                         <rect key="frame" x="0.0" y="84" width="354" height="34"/>
@@ -41,21 +41,40 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="logIn" destination="BYZ-38-t0r" eventType="touchUpInside" id="5mp-Gl-Fns"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cm-Fs-zpu">
-                                <rect key="frame" x="212.5" y="515" width="171.5" height="31"/>
+                                <rect key="frame" x="279.5" y="515" width="104.5" height="25.5"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Forget your password?"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Forget password?">
+                                            <attributes>
+                                                <font key="NSFont" size="10" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="forgetPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="XA9-M5-M0Y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFG-MS-o1l">
-                                <rect key="frame" x="30" y="515" width="177" height="31"/>
+                                <rect key="frame" x="30" y="515" width="108.5" height="25.5"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Forget your user name?"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Forget user name?">
+                                            <attributes>
+                                                <font key="NSFont" size="10" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="forgetUserName" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mg1-YS-vH2"/>
                                 </connections>
@@ -75,10 +94,66 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Cm-Fs-zpu" secondAttribute="trailing" constant="30" id="jL5-fD-Qzj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Password" destination="ews-No-lUG" id="VyC-ly-VMn"/>
+                        <outlet property="password" destination="ews-No-lUG" id="sJk-xt-43x"/>
+                        <outlet property="userName" destination="DqD-mG-1Tw" id="JD1-91-aFr"/>
+                        <segue destination="uID-m8-Xo5" kind="presentation" identifier="logined" modalPresentationStyle="fullScreen" id="hCJ-Up-xLo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="98"/>
+            <point key="canvasLocation" x="-742" y="-94"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="06y-yJ-OKd">
+            <objects>
+                <viewController id="hiG-iW-Qrn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vnQ-hA-dfL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="81E-ck-rR1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="uIm-NA-FcZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gtd-cy-cDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984" y="210"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="o07-XD-X6u">
+            <objects>
+                <viewController id="lnl-Ur-1jB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s3j-W0-Tmc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6n0-UD-FKm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Apd-ma-6FF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fX-f0-Ffl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984" y="-397"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mGF-oc-Tti">
+            <objects>
+                <tabBarController id="uID-m8-Xo5" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0ww-Hw-iqm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="lnl-Ur-1jB" kind="relationship" relationship="viewControllers" id="A6U-xu-hrU"/>
+                        <segue destination="hiG-iW-Qrn" kind="relationship" relationship="viewControllers" id="ziB-gO-0lv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0RT-S7-xtU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96" y="-94"/>
         </scene>
     </scenes>
     <resources>
