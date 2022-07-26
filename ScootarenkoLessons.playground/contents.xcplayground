@@ -17,5 +17,9 @@
         <page name='Lesson14Properties'/>
         <page name='Lesson15PropertiesOfTypes'/>
         <page name='Lesson16Methods'/>
+        <page name='Lesson17Subscripts'/>
+        <page name='Lesson18Inheritance'/>
+        <page name='Lesson20OptionalChaining'/>
+        <page name='Untitled Page'/>
     </pages>
 </playground>
