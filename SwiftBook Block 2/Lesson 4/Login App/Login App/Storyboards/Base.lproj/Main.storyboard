@@ -100,7 +100,6 @@
                         <outlet property="Password" destination="ews-No-lUG" id="VyC-ly-VMn"/>
                         <outlet property="password" destination="ews-No-lUG" id="sJk-xt-43x"/>
                         <outlet property="userName" destination="DqD-mG-1Tw" id="JD1-91-aFr"/>
-                        <segue destination="uID-m8-Xo5" kind="presentation" identifier="logined" modalPresentationStyle="fullScreen" id="hCJ-Up-xLo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -116,7 +115,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here must be info about current user" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPP-Fb-qCC">
-                                <rect key="frame" x="30" y="138" width="0.0" height="151"/>
+                                <rect key="frame" x="30" y="138" width="354" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -139,8 +138,8 @@
         <!--Profile-->
         <scene sceneID="o07-XD-X6u">
             <objects>
-                <viewController id="lnl-Ur-1jB" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="s3j-W0-Tmc">
+                <viewController id="lnl-Ur-1jB" customClass="UserProfileViewController" customModule="Login_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s3j-W0-Tmc" customClass="ProfileView" customModule="Login_App" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -176,7 +175,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="Dds-JF-IaI"/>
+                                    <action selector="logOutButtotDidTap" destination="lnl-Ur-1jB" eventType="touchUpInside" id="W4T-VC-uEa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -199,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="982.60869565217399" y="-397.09821428571428"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--User View Controller-->
         <scene sceneID="mGF-oc-Tti">
             <objects>
-                <tabBarController id="uID-m8-Xo5" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="UserViewController" id="uID-m8-Xo5" customClass="UserViewController" customModule="Login_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0ww-Hw-iqm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

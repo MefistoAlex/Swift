@@ -9,17 +9,17 @@ enum AnimalType: String {
     case cat = "🐱"
     case rabbit = "🐰"
     case turtle = "🐢"
-    
+
     var definition: String {
         switch self {
         case .dog:
-            return "dog"
+            return "You like being with friends. You surround yourself with people who you like and who are always ready to help."
         case .cat:
-            return "cat"
+            return "You are on your mind. Love to walk on your own. You value solitude."
         case .rabbit:
-            return "rabbit"
+            return "You like everything soft. You are healthy and full of energy."
         case .turtle:
-            return "turtle"
+            return "Your strength is in wisdom. Slow and thoughtful wins over long distances."
         }
     }
 }

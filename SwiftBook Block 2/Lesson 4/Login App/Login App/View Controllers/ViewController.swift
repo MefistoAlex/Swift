@@ -8,6 +8,16 @@
 import SwiftUI
 import UIKit
 
+extension UIViewController {
+     func PresentController (controlerName: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: controlerName)
+        controller.modalPresentationStyle = .fullScreen
+        
+        present(controller, animated: true)
+    }
+}
+
 class ViewController: UIViewController {
     //MARK: Privates
     private var alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
@@ -42,6 +52,6 @@ class ViewController: UIViewController {
             present(alert, animated: true)
             return
         }
-        performSegue(withIdentifier: "logined", sender: self)
+        PresentController(controlerName: "UserViewController")
     }
 }
